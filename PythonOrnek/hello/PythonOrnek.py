@@ -1,4 +1,5 @@
 import random
+from turtle import circle
 
 #OOP
 #class => person(name,surname,age,birthday,calculateAge())
@@ -23,6 +24,9 @@ import random
 # calisan1.show_info()
 
 # calisan.show_info(calisan1)
+
+
+
 
 ################################################################
 
@@ -122,6 +126,38 @@ import random
 #        break
 
 #################################################################
+
+#ÖRNEK-2
+#
+#
+#
+#
+#
+# 
+
+class Circle:
+    #Class object attribute
+    pi = 3.14
+
+    def __init__(self,yaricap=1):
+        self.yaricap = yaricap;
+        #methods
+    def cevre_hesapla(self):
+        return 2*self.pi+self.yaricap
+    def alan_hesapla(self):
+        return self.pi *(self.yaricap**2)
+    
+c1 = Circle()
+c2 = Circle(5) # yaricap = 1
+
+print(f"c1 : alan =  { c1.alan_hesapla()} çevre = {c1.cevre_hesapla()}")
+print(f"c2 : alan =  { c2.alan_hesapla()} çevre = {c2.cevre_hesapla()}")
+        
+
+        
+
+        
+
 
 # lst = [1,2,3]
 # lst2 = [1,2,3,4,5]

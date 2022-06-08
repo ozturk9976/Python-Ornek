@@ -1,6 +1,9 @@
 import random
 from turtle import circle
 
+
+
+
 #OOP
 #class => person(name,surname,age,birthday,calculateAge())
 #instance (object)
@@ -128,30 +131,26 @@ from turtle import circle
 #################################################################
 
 #ÖRNEK-2
-#
-#
-#
-#
-#
-# 
 
-class Circle:
-    #Class object attribute
-    pi = 3.14
+# class Circle:
+#     #Class object attribute
+#     pi = 3.14
 
-    def __init__(self,yaricap=1):
-        self.yaricap = yaricap;
-        #methods
-    def cevre_hesapla(self):
-        return 2*self.pi+self.yaricap
-    def alan_hesapla(self):
-        return self.pi *(self.yaricap**2)
+#     def __init__(self,yaricap=1):
+#         self.yaricap = yaricap;
+#         #methods
+#     def cevre_hesapla(self):
+#         return 2*self.pi+self.yaricap
+#     def alan_hesapla(self):
+#         return self.pi *(self.yaricap**2)
     
-c1 = Circle()
-c2 = Circle(5) # yaricap = 1
+# c1 = Circle() # yaricap = 1
+# c2 = Circle(5) 
 
-print(f"c1 : alan =  { c1.alan_hesapla()} çevre = {c1.cevre_hesapla()}")
-print(f"c2 : alan =  { c2.alan_hesapla()} çevre = {c2.cevre_hesapla()}")
+# print(f"c1 : alan =  { c1.alan_hesapla()} çevre = {c1.cevre_hesapla()}")
+# print(f"c2 : alan =  { c2.alan_hesapla()} çevre = {c2.cevre_hesapla()}")
+
+#####################################################################
         
 
         
@@ -226,3 +225,23 @@ print(f"c2 : alan =  { c2.alan_hesapla()} çevre = {c2.cevre_hesapla()}")
 
 
 # 2-Belirlenen kullanıcı adı ve şifre doğru girildiğinde "giriş başarılı" , yanlış girildiğinde "giriş başarısız" yazan program
+
+kullaniciAdi = input("lütfen kullanıcı adınızı girin")
+sifre = input("lütfen şifrenizi girin")
+
+while True:
+    girisEkranKullaniciAdi = input("lütfen belirlediğiniz kullanıcı adını girin")
+    if kullaniciAdi == girisEkranKullaniciAdi:
+        print("kullanıcı adını doğru girdiniz")
+    else :
+        print("kullanıcı adı uyuşmuyor")
+        break
+    girisEkranSifre = input("lütfen belirlediğiniz şifreyi girin")
+    if girisEkranSifre == sifre:
+        print("şifrenizi doğru girdiniz")
+    else:
+        print("şifre uyuşmuyor")
+        break
+    print("Giriş başarılı")
+
+

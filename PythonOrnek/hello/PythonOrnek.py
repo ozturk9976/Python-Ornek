@@ -1,5 +1,8 @@
+from ast import If
 import random
 from turtle import circle
+
+
 
 
 
@@ -43,6 +46,39 @@ from turtle import circle
 #BİLEMEZSE -5 PUAN BİLİRSE +50 PUAN KAZANSIN
 #OYUN 100 PUAN OLUNCA VEYA 0 PUAN OLUNCA BİTSİN
 #BAŞLANGIÇ PUANI FARKETMEZ
+
+# class Oyun:
+#     def __init__(self,isim,puan,pcpuan):
+#         self.isim =isim
+#         self.puan =puan
+#         self.pcpuan = pcpuan
+
+#     def zarPC(self):
+#         self.zarPC = random.randint(1-10)
+#         print(self.zarPC)
+#     def zarPlayer(self):
+#         self.zarPlayer = random.randint(1-10)
+#         print(self.zarPlayer)
+
+#     def puanlama(self):
+#         if self.zarPC > self.zarPlayer:
+#             self.zarPC +=10
+#             self.zarPlayer -=10
+#         if self.zarPlayer > self.zarPC:
+#             self.zarPlayer += 10
+#             self.zarPC -= 10
+
+# oyun = Oyun("hamza",50,50)
+# while True:
+#     Oyun.zarPC()
+#     Oyun.zarPlayer()
+#     Oyun.puanlama()
+
+#     if oyun.bilgisayarPuan == 100 or oyun.oyuncuPuan == 0:
+#         print("PC kazandı")
+#     if oyun.bilgisayarPuan == 0 or oyun.oyuncuPuan == 100:
+#         print(oyun.isimgirdisi,"Kazandı")
+#         break
 
 
 # class oyun:
@@ -151,12 +187,6 @@ from turtle import circle
 # print(f"c2 : alan =  { c2.alan_hesapla()} çevre = {c2.cevre_hesapla()}")
 
 #####################################################################
-        
-
-        
-
-        
-
 
 # lst = [1,2,3]
 # lst2 = [1,2,3,4,5]
@@ -222,26 +252,152 @@ from turtle import circle
 #     print("Geçtiniz")
 # else :
 #     print("kaldınız")
+#########################################################################
+
+#Contrustur metotun icindeki parametrelere
+#Miktar tur ve cevrilcektur
+#Biri yazdir  Diger metotta cevir diye metot
+#Sinifin adi cevirici
+#Bu klavyeden girişleri ise metot disinda sorucan main yani
+#3 tane olcak
+#Miktar giriniz para turu giriniz ve cevrilcek turu giriniz diye
+
+class Cevirici:
+      def __init__(self,miktar,tür,cevirilecektür):
+         self.miktar = miktar
+         self.tür = tür
+         self.cevirilecektür = cevirilecektür
+
+      def yazdir(self):
+        print(self.sonuc)
+
+      def cevir(self):
+        if self.tür == "dolar" and self.cevirilecektür == "tl":
+            self.tldegeri = self.miktar * 16
+            self.sonuc = self.tldegeri
+        if self.tür == "tl" and self.cevirilecektür == "dolar":
+            self.dolardegeri = self.miktar / 16
+            self.sonuc = self.dolardegeri
+
+while True:
+
+  miktar = int(input("miktar giriniz"))
+  tür = input(str("tür giriniz"))
+  cevirilecektür = input(str("cevirilecektür giriniz"))
+
+  Cevirici = Cevirici(miktar,tür,cevirilecektür)
+
+  Cevirici.cevir()
+  Cevirici.yazdir()
+  break
+
+
+            
+
+
+            
+
+
+# class Cevirici:
+#     def __init__(self,miktar,tür,cevirilecektür):
+#         self.miktar = miktar
+#         self.tür = tür
+#         self.cevirilecektür = cevirilecektür
+        
+
+#     def cevir(self):
+#             if self.tür == "dolar" and self.cevirilecektür == "tl":
+#                tldegeri = self.miktar * 17             
+#                self.sonuc = tldegeri
+#             if self.tür == "tl" and self.cevirilecektür == "dolar":
+#                dolardegeri = self.miktar / 17
+#                print("girdiğiniz dolar miktarının dolar değeri ", dolardegeri)
+#                self.sonuc = dolardegeri
+
+#     def yazdir(self):
+#         print(self.sonuc)
+
+#         miktar = int(input("miktar giriniz"))
+#         tür = input("tür giriniz")
+#         cevirilecektür = input("cevirilecektür giriniz")
+
+              
+#         cevir1=Cevirici(miktar,tür,cevirilecektür)
+#         cevir1.cevir()
+#         cevir1.yazdir()
+    
+
+        
+        
+
+
+
+            
+        
+        
+
+    
+            
+
+                
+
+                
+
+
+   
+
+
+
+
+
+    
+
+        
+
+
+
 
 
 # 2-Belirlenen kullanıcı adı ve şifre doğru girildiğinde "giriş başarılı" , yanlış girildiğinde "giriş başarısız" yazan program
 
-kullaniciAdi = input("lütfen kullanıcı adınızı girin")
-sifre = input("lütfen şifrenizi girin")
+# kullaniciAdi = input("lütfen kullanıcı adınızı girin")
+# sifre = input("lütfen şifrenizi girin")
 
-while True:
-    girisEkranKullaniciAdi = input("lütfen belirlediğiniz kullanıcı adını girin")
-    if kullaniciAdi == girisEkranKullaniciAdi:
-        print("kullanıcı adını doğru girdiniz")
-    else :
-        print("kullanıcı adı uyuşmuyor")
-        break
-    girisEkranSifre = input("lütfen belirlediğiniz şifreyi girin")
-    if girisEkranSifre == sifre:
-        print("şifrenizi doğru girdiniz")
-    else:
-        print("şifre uyuşmuyor")
-        break
-    print("Giriş başarılı")
+# while True:
+#     girisEkranKullaniciAdi = input("lütfen belirlediğiniz kullanıcı adını girin")
+#     if kullaniciAdi == girisEkranKullaniciAdi:
+#         print("kullanıcı adını doğru girdiniz")
+#     else :
+#         print("kullanıcı adı uyuşmuyor")
+#         break
+#     girisEkranSifre = input("lütfen belirlediğiniz şifreyi girin")
+#     if girisEkranSifre == sifre:
+#         print("şifrenizi doğru girdiniz")
+#     else:
+#         print("şifre uyuşmuyor")
+#         break
+#     print("Giriş başarılı")
+#     break
+
+# 3-Klavyeden girilen sayının tek mi çift mi olduğunu gösteren program
+
+# 4-bir mağazada alınan ürünün fiyatı 100 tl ve üzeri iste 5tl olan kargo ücreti alınmamaktadır
+## ürünün fiyatı girilidğinde toplam ödenmesi gereken tutarı gösteren program
+
+# 5-Kullanıcıdan girdiği iki sayı ve yapılacak işlem türü(toplama,çıkarma,çarpma,bölme) seçildiğinde, sonucu
+## hesaplayarak ekranda gösteren program
+
+# 6-klavyeden iki ürünün fiyatı girildiğinde toplam fiyat 200tl den fazla ise 2. üründen yüzde 25 indirim
+## yaparak ödenece tutarı gösteren program
+
+# 7-kullanıcıdan 2 tane sayı istenerek 1. sayı 2. sayıya tam bölünüyorsa ekrana yazan aksi durumda
+## bölünmüyor diyerek kalanı ekrana yazan program
+
+
+# 8-klavyeden girilen bir sayının seçime bağlı olarak karesini,küpünü ve karekökünü alan program
+
+
+
+        
 
 
